@@ -1,0 +1,17 @@
+Time Complexity Report:
+
+1.Constructor -> processing array of cities -> O(N) ;
+2.sort() of STL -> O(NlogN) ;
+3. Base case:
+    i.creating complete graph edges -> O(M^2);
+    ii.sorting edges -> O(M^2logM) ;
+    iii.Kruskal algorithm -> M^2 for search, M for BFS. finally O(M^3);
+but since base case being small. we can consider it as O(1);
+
+4. Crossing edges during merge -> O(M^2) ~ O(1);
+
+5.Recurrence relation is: T(N)=2T(N/2)+ O(1);
+using masters theorem, solution is N^(log₂2) = N  
+so ans is O(N);
+
+so finally Complexity is O(NlogN);
